@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/ent_view1"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ingresa un numero"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <EditText
+        android:id="@+id/ent_view2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Ingresa otro numero"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ent_view1" />
+
+    <Button
+        android:id="@+id/btnSumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:background="#F30505"
+        android:backgroundTint="@color/purple_200"
+        android:backgroundTintMode="src_atop"
+        android:bufferType="normal"
+        android:onClick="calcular"
+        android:text="Calcular Resultado"
+        android:textAlignment="center"
+        android:textColor="#200101"
+        android:textColorHint="#0C0000"
+        android:textDirection="firstStrongLtr"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ent_view2" />
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="28dp"
+        android:text="Resultado"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSumar" />
+
+    <RadioGroup
+        android:layout_width="295dp"
+        android:layout_height="175dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSumar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ent_view2"
+        app:layout_constraintVertical_bias="0.527">
+
+        <RadioButton
+            android:id="@+id/rb_suma"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="suma" />
+
+        <RadioButton
+            android:id="@+id/rb_resta"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="resta" />
+
+        <RadioButton
+            android:id="@+id/rb_multiplicacion"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="multiplicacion" />
+
+        <RadioButton
+            android:id="@+id/rb_division"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="division" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnSiguiente"
+        android:text="Siguiente"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="602dp" />
+
+</android.support.constraint.ConstraintLayout>
